@@ -2,6 +2,7 @@ const { UserModel } = require("../model/user.model");
 
 
 const unique = async (req,res,next)=>{
+    let {email} =req.body 
  console.log(req.url)
     if (req.url =="/register"){
         let user = await UserModel.findOne({ email });
